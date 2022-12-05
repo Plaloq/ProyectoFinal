@@ -13,7 +13,7 @@ class EditarReceta extends StatefulWidget {
 
 class _EditarReceta extends State<EditarReceta> {
   late Map<String, dynamic> receta;
-  String id = "";
+  String id = '';
   TextEditingController nombreController = TextEditingController();
   TextEditingController descripcionController = TextEditingController();
   TextEditingController duracionController = TextEditingController();
@@ -113,7 +113,9 @@ class _EditarReceta extends State<EditarReceta> {
                       dificultadController.text.isNotEmpty &&
                       imagenController.text.isNotEmpty &&
                       categoriaController.text.isNotEmpty) {
-                    final nuevaReceta = Receta({},
+                    final nuevaReceta = Receta(
+                        {},
+                        id: receta['id'],
                         nombre: nombreController.text,
                         descripcion: descripcionController.text,
                         duracion: duracionController.text,
@@ -148,10 +150,12 @@ class _EditarReceta extends State<EditarReceta> {
               ),
               onPressed: () {
                 deleteReceta();
+                Navigator.pop(context);
               },
               child: const Text(
                 'Eliminar',
                 style: TextStyle(color: Colors.black),
+
               ),
             ),
           )

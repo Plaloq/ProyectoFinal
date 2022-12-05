@@ -87,7 +87,6 @@ class _AgregarReceta extends State<AgregarReceta>{
                     categoriaController.text.isNotEmpty ) {
                   final nuevaReceta = Receta(
                     {},
-                      id: '',
                     nombre: nombreController.text,
                     descripcion: descripcionController.text,
                     duracion: duracionController.text,

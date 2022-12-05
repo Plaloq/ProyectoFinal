@@ -18,15 +18,6 @@ class _LoginState extends State<Login> {
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return SignInScreen(
-            //headerBuilder: (context, constraints, ) {
-            //  return Padding(
-            //    padding: const EdgeInsets.all(15),
-            //    child: AspectRatio(
-            //      aspectRatio: 1,
-            //      child: Image.asset("assets/"),
-            //    ),
-            //  );
-            //},
               subtitleBuilder: (context, action) {
                 return const Padding(
                   padding: EdgeInsets.only(bottom: 8),
